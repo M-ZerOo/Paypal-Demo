@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Paypal Demo</string>
+    <string name="choose_payment_method">Choose Payment Method</string>
+    <string name="expires_in">Expires in:</string>
+    <string name="card_number">Card number</string>
+    <string name="enter_card_info">Enter Card Info</string>
+    <string name="expiration_month">Expiration month</string>
+    <string name="expiration_year">Expiration Year</string>
+    <string name="security_code">Security code</string>
+    <string name="street_address">Street address</string>
+    <string name="extended_address">Extended address</string>
+    <string name="locality">Locality</string>
+    <string name="region">Region</string>
+    <string name="postal_code">Postal code</string>
+    <string name="country_code">Country code</string>
+    <string name="order_now">Order Now</string>
+    <string name="enter_amount_info">Enter Amount Info</string>
+    <string name="currency_code">Currency code</string>
+    <string name="value">Value</string>
+    <string name="order_id">Order ID:</string>
+    <string name="order_status">Order status:</string>
+</resources>

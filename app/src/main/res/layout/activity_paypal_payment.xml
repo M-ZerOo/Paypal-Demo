@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PaypalPaymentActivity">
+
+    <TextView
+        android:id="@+id/order_id_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="end"
+        android:text="@string/order_id"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/order_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/order_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="start"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/order_id_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/order_status_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="end"
+        android:text="@string/order_status"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/order_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_id_label"
+        />
+
+    <TextView
+        android:id="@+id/order_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="start"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/order_status_label"
+        app:layout_constraintTop_toBottomOf="@id/order_id_label"
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="?attr/dividerHorizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_status_label" />
+
+    <TextView
+        android:id="@+id/card_instructions"
+        android:text="@string/enter_card_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/card_number_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_instructions"
+        android:inputType="number"
+        android:hint="@string/card_number" />
+
+    <EditText
+        android:id="@+id/card_exp_month_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_exp_year_edittext"
+        app:layout_constraintTop_toBottomOf="@id/card_number_edittext"
+        android:inputType="number"
+        android:hint="@string/expiration_month" />
+
+    <EditText
+        android:id="@+id/card_exp_year_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/card_exp_month_edittext"
+        app:layout_constraintEnd_toStartOf="@id/card_security_code_edittext"
+        app:layout_constraintTop_toBottomOf="@id/card_number_edittext"
+        android:inputType="number"
+        android:hint="@string/expiration_year" />
+
+    <EditText
+    android:id="@+id/card_security_code_edittext"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toEndOf="@id/card_exp_year_edittext"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/card_number_edittext"
+    android:inputType="number"
+    android:hint="@string/security_code" />
+
+    <EditText
+        android:id="@+id/card_street_address_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_exp_month_edittext"
+        android:inputType="text"
+        android:hint="@string/street_address" />
+
+    <EditText
+        android:id="@+id/card_extended_address_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_street_address_edittext"
+        android:inputType="text"
+        android:hint="@string/extended_address" />
+
+    <EditText
+        android:id="@+id/card_locality_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_region_edittext"
+        app:layout_constraintTop_toBottomOf="@id/card_extended_address_edittext"
+        android:inputType="text"
+        android:hint="@string/locality" />
+
+    <EditText
+        android:id="@+id/card_region_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/card_locality_edittext"
+        app:layout_constraintEnd_toStartOf="@id/card_postal_code_edittext"
+        app:layout_constraintTop_toBottomOf="@id/card_extended_address_edittext"
+        android:inputType="text"
+        android:hint="@string/region" />
+
+    <EditText
+        android:id="@+id/card_postal_code_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/card_region_edittext"
+        app:layout_constraintEnd_toStartOf="@id/card_country_code_edittext"
+        app:layout_constraintTop_toBottomOf="@id/card_extended_address_edittext"
+        android:inputType="number"
+        android:hint="@string/postal_code" />
+
+    <EditText
+        android:id="@+id/card_country_code_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/card_postal_code_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_extended_address_edittext"
+        android:inputType="text"
+        android:hint="@string/country_code" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/order_now" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
